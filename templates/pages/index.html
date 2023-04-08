@@ -100,39 +100,36 @@
         <div class="col-lg-7 mb-lg-0 mb-4">
           <div class="card">
             <div class="card-body p-3">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="d-flex flex-column h-100">
-                    <p class="mb-1 pt-2 text-bold">Built by developers</p>
-                    <h5 class="font-weight-bolder">Soft UI Dashboard</h5>
-                    <p class="mb-5">From colors, cards, typography to complex elements, you will find the full documentation.</p>
-                    <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-                      Read More
-                      <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+              <div class="row ">
+                <div class="col-lg-4 offset-lg-0">
                   <div class="bg-gradient-primary border-radius-lg h-100">
-                    <img src="{% static 'img/shapes/waves-white.svg' %}" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
+                    
                     <div class="position-relative d-flex align-items-center justify-content-center h-100">
-                      <img class="w-100 position-relative z-index-2 pt-4" src="{% static 'img/illustrations/rocket-white.png' %}" alt="rocket">
+                      <img class="w-100 position-relative z-index-2 pt-4" src="/static/img/illustrations/rocket-white.png" alt="rocket">
                     </div>
                   </div>
+                </div><div class="col-lg-7">
+                  <div class="d-flex flex-column h-100">
+                    <p class="font-weight-bolder mb-1 pt-2 text-bold">ELASTIC CLUSTER SIZING ESTIMATION</p>
+                    <input class="font-weight-bolder mb-2 form-control" type="text" placeholder="Company Name" onfocus="focused(this)" onfocusout="defocused(this)" style="border: none;outline: none;font-size: xxX-large;">
+                    <p class="mb-5 small">This Dashboard will help you determine sizing and capacity for planning details</p>
+                    
+                  </div>
                 </div>
+                
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-5">
           <div class="card h-100 p-3">
-            <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('{% static 'img/ivancik.jpg' %}');">
+            <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../../static/img/elastic-3.jpg');">
               <span class="mask bg-gradient-dark"></span>
               <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-                <h5 class="text-white font-weight-bolder mb-4 pt-2">Work with the rockets</h5>
-                <p class="text-white">Wealth creation is an evolutionarily recent positive-sum game. It is all about who take the opportunity first.</p>
-                <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-                  Read More
+                <h5 class="text-white font-weight-bolder mb-4 pt-2">Disclaimer</h5>
+                <p class="text-white">This dashboard was created based on Ocotdet Excel sizing document, the main goal is to have an estimation about resources utilization such as mermory, storage, network and compute.</p>
+                <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="https://gitlab.com/groups/gitlab-org/-/uploads/e21f315177585c93ea6e748470367dca/elasticsearch-sizing-and-capacity-planning.pdf">
+             Read More
                   <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                 </a>
               </div>
@@ -140,6 +137,7 @@
           </div>
         </div>
       </div>
+
 <!--  table --> 
 <div class="row my-4">
   <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
@@ -180,16 +178,17 @@
                   </div>
                 </td>
                 <td>
-                  
-                <input type="number" style="width: 80%; margin: 0 auto;" class="form-control input col-1" onfocus="focused(this)" onfocusout="defocused(this)" value="0"></td>
+                <input type="number" style="width: 80%; margin: 0 auto;" class="form-control input col-1" onfocus="focused(this)" onfocusout="defocused(this)" value="0">
+                </td>
                 <td class="align-middle text-center text-sm">
                   <input type="number" style="width: 80%; margin: 0 auto;" class="form-control input col-2" onfocus="focused(this)" onfocusout="defocused(this)" value="240">
                 </td>
                 <td class="align-middle text-center text-sm">
-                  
-                        <span class="result col-3 w-10 text-xs font-weight-bold" value="0" type="number"></span>                
+                  <!-- <input type="number" style="width: 80%; margin: 0 auto;" class="form-control result col-3" onfocus="focused(this)" onfocusout="defocused(this)" value="240">
+                 -->
+                  <h3><span class="result col-3 w-10 text-xs font-weight-bold" value="0" type="number"></span></h3>                
                 </td>
-              <td class="align-middle text-center text-sm">
+                <td class="align-middle text-center text-sm">
                   <span class="gbresult text-xs font-weight-bold"></span>
                 </td></tr>
                 
@@ -306,7 +305,7 @@
                   
                 <input type="number" style="width: 80%; margin: 0 auto;" class="form-control input col-2" onfocus="focused(this)" onfocusout="defocused(this)" value="3"></td>
                 <td class="align-middle text-center text-sm">
-                  <span class="result w-10 text-xs font-weight-bold" value="0" type:"number" ></span>                
+                  <span class="result w-10 text-xs font-weight-bold" value="0"></span>                
           </td>
               <td class="align-middle text-center text-sm">
                   
@@ -327,7 +326,7 @@
                   </div>
                 </div><div class="card mb-4">
       <div class="card mb-4">
-        <button class="btn bg-gradient-primary mb-0" onclick="calculateTotals()" "="">Calculate</button>
+        <button class="btn bg-gradient-primary mb-0" onclick="calculateTotals()">Calculate</button>
       </div>
 
 
@@ -349,13 +348,31 @@
         </div>
       </div>
     </div>
-    
+
     <div class="card mb-4">
       <div class="card-body p-3">
         <div class="row">
           <div class="col-8">
             <div class="numbers">
-              <p class="text-sm mb-0 text-capitalize font-weight-bold">Total EPS per Day</p>
+              <p class="text-sm mb-0 text-capitalize font-weight-bold">Total EPS</p>
+              <h4 class="columnTotal font-weight-bolder mb-0"><span id="col-2-total"></span></h4>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+              <i class="fa-solid fa-minimize" style="color: rgb(255, 255, 255)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-8">
+            <div class="numbers">
+              <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Devices EPS per Day</p>
               <h4 class="columnTotal font-weight-bolder mb-0"><span id="col-3-total"></span></h4>
             </div>
           </div>
@@ -882,11 +899,11 @@
 {% block scripts %}
 <script>
   const inputFields = document.querySelectorAll('tbody input[type="number"]');
+  const h3Fields = document.querySelectorAll('tbody h3[data-type="number"]');
   const col1Total = document.getElementById('col-1-total');
   const col2Total = document.getElementById('col-2-total');
   const col3Total = document.getElementById('col-3-total');
   const col4Total = document.getElementById('col-4-total');
-  const col5Total = document.getElementById('col-5-total');
 
   function calculateTotals() {
 
@@ -898,22 +915,6 @@
     var result = input1 * input2;
     results[i/2].innerHTML = result;
   }
-
-  var epstotalinputs = document.getElementsByClassName("epstotalinput");
-var gbresults = document.getElementsByClassName("gbresult");
-for (var i = 0; i < epstotalinputs.length; i += 2) {
-  calculateGbResult(i);
-  epstotalinputs[i].addEventListener("input", function() {
-    calculateGbResult(i);
-  });
-}
-
-function calculateGbResult(i) {
-  var input3 = parseInt(epstotalinputs[i].value);
-  var gbresult = input3 * 3600*24/1024/1024;
-  gbresults[i/2].innerHTML = gbresult;
-}
-
     let col1Sum = 0;
     let col2Sum = 0;
     let col3Sum = 0;
@@ -925,23 +926,27 @@ function calculateGbResult(i) {
         col1Sum += parseFloat(input.value) || 0;
       } else if (input.classList.contains('col-2')) {
         col2Sum += parseFloat(input.value) || 0;
-      } else if (input.classList.contains('col-3')) {
-        col3Sum += parseFloat(input.value) || 0;
+      } 
+    });
+    
+    h3Fields.forEach(input => {
+       if (input.classList.contains('col-3')) {
+        col3Sum += parseFloat(h3.innerText) || 0;
       } else if (input.classList.contains('col-4')) {
-        col4Sum += parseFloat(input.value) || 0;
-      } else if (input.classList.contains('col-5')) {
-        col5Sum += parseFloat(input.value) || 0;
-      }
+        col4Sum += parseFloat(h3.innerText) || 0;
+      } 
     });
 
     col1Total.innerText = col1Sum.toFixed(0);
     col2Total.innerText = col2Sum.toFixed(0);
     col3Total.innerText = col3Sum.toFixed(0);
     col4Total.innerText = col4Sum.toFixed(0);
-    col5Total.innerText = col5Sum.toFixed(0);
   }
 
   inputFields.forEach(input => {
+    input.addEventListener('input', calculateTotals);
+  });
+  h3Fields.forEach(input => {
     input.addEventListener('input', calculateTotals);
   });
 </script>
