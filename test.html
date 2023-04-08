@@ -1,0 +1,31 @@
+<table>
+	<tbody id="table-body">
+	  <tr>
+		<td><input type="number" class="input" value="2"></td>
+		<td><input type="number" class="input" value="3"></td>
+		<td><span class="result"></span></td>
+	  </tr>
+	  <tr>
+		<td><input type="number" class="input" value="4"></td>
+		<td><input type="number" class="input" value="5"></td>
+		<td><span class="result"></span></td>
+	  </tr>
+	</tbody>
+  </table>
+  
+  <button onclick="updateTable()">Update</button>
+  
+  <script>
+  function updateTable() {
+	var inputs = document.getElementsByClassName("input");
+	var results = document.getElementsByClassName("result");
+  
+	for (var i = 0; i < inputs.length; i += 2) {
+	  var input1 = parseInt(inputs[i].value);
+	  var input2 = parseInt(inputs[i+1].value);
+	  var result = input1 * input2;
+	  results[i/2].innerHTML = result;
+	}
+  }
+  </script>
+  
